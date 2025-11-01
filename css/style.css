@@ -4,6 +4,8 @@ body{
     color: white;
     font-family: "Space Grotesk", sans-serif;
 }
+
+/*  HEADER  */
 header{
     display: grid;
     height: 100px;
@@ -24,6 +26,7 @@ header > button{
     padding: 15px 20px;
     align-self: center;
     justify-self: center;
+    text-align: center;
     border-radius: 10px;
     cursor: pointer;
     transition: color, background ease-in-out 0.25s;
@@ -39,4 +42,38 @@ header > button.active{
 header > button.active:hover{
     background-color: #112c63;
     
+}
+
+/*  FOOTER */
+footer{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    border-top: #E5E8EB solid 1px;
+    bottom: 0;
+    gap: 25px;
+    width: 100%;
+    height: 125px;
+    align-items: center;
+    justify-content: center;
+}
+
+footer > p {
+    margin: 0;
+}
+
+#links{
+    display: flex;
+    gap: 15px;
+    height: 25%;
+}
+
+#links > img{
+    height: 100%;
+    transition: filter ease-in-out 0.2s;
+    cursor: pointer;
+}
+
+#links > img:hover{
+    filter: drop-shadow(0 0 5px rgb(186, 196, 221));
 }

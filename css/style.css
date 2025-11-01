@@ -1,0 +1,42 @@
+body{
+    margin: 0;
+    background-color: #121217;
+    color: white;
+    font-family: "Space Grotesk", sans-serif;
+}
+header{
+    display: grid;
+    height: 100px;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-bottom: #E5E8EB solid 1px;
+    grid-template-columns: 5fr 1fr 1fr 1fr 1fr;
+}
+header > h1{
+    justify-self: left;
+    align-self: center;
+    font-weight: bold;
+}
+header > button{
+    all: unset;
+    width: fit-content;
+    height: fit-content;
+    padding: 15px 20px;
+    align-self: center;
+    justify-self: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: color, background ease-in-out 0.25s;
+}
+header > button:hover:not(.active){
+    color: black;
+    background-color: white;
+    
+}
+header > button.active{
+    background-color: #2B6BED;
+}
+header > button.active:hover{
+    background-color: #112c63;
+    
+}

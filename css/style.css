@@ -5,6 +5,17 @@ body{
     font-family: "Space Grotesk", sans-serif;
 }
 
+a{
+    all: unset;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color ease-in-out 0.2s;
+}
+
+a:hover{
+    color: #cfcfcf;
+}
+
 /*  HEADER  */
 header{
     display: grid;

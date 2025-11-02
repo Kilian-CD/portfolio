@@ -1,3 +1,6 @@
+html, body{
+    overflow: clip;
+}
 body{
     margin: 0;
     background-color: #121217;
@@ -10,6 +13,12 @@ a{
     text-decoration: underline;
     cursor: pointer;
     transition: color ease-in-out 0.2s;
+}
+
+ul{
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
 }
 
 a:hover{
@@ -43,6 +52,14 @@ header > button{
     cursor: pointer;
     transition: color, background ease-in-out 0.25s;
 }
+
+header > img{
+    display: none;
+    width: 40%;
+    align-self: center;
+    justify-self: center;
+}
+
 header > button:hover:not(.active){
     color: black;
     background-color: white;
@@ -56,7 +73,7 @@ header > button.active:hover{
     
 }
 
-/*  FOOTER */
+/*  FOOTER  */
 footer{
     display: flex;
     flex-direction: column;
@@ -73,6 +90,7 @@ footer{
 
 footer > p {
     margin: 0;
+    text-align: center;
 }
 
 #links{
@@ -91,39 +109,125 @@ footer > p {
     filter: drop-shadow(0 0 5px rgb(186, 196, 221));
 }
 
-/*  SECTION */
+/*  MENU  */
+menu{
+    display: grid;
+    width: 100vw;
+    height: 100svh;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: -100vw;
+    position: fixed;
+    background-color: #121217;
+    z-index: 2;
+    transition: left ease-in-out 0.5s;
+    grid-template-rows: 100px 1fr 1fr 1fr 1fr;
+}
+
+menu > img{
+    height: 30%;
+    justify-self: left;
+    align-self: center;
+    padding-left: 30px;
+}
+
+menu > button{
+    all: unset;
+    width: fit-content;
+    height: fit-content;
+    padding: 15px 20px;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: color, background ease-in-out 0.25s;
+}
+
+menu > button:hover:not(.active){
+    color: black;
+    background-color: white;
+    
+}
+menu > button.active{
+    background-color: #2B6BED;
+}
+menu > button.active:hover{
+    background-color: #112c63;
+    
+}
+
+
+/*  SECTION  */
 #section-carrousel{
     display: flex;
-    flex-wrap: wrap;
-    overflow: auto;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
     text-align: center;
-    align-items: center;
     justify-content: center;
-    height: calc(100vh - 225px);
+    width: fit-content;
+    height: calc(100svh - 225px);
+    transition: transform ease-in-out 0.5s;
 }
 
 #section-carrousel > section{
-    margin-top: 50px;
-    margin-bottom: 50px;
+    display: flex;
+    height: min-content;
+    min-height: calc(100svh - 225px - 4vw);
+    flex: 0 0 84vw;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    padding: 2vw 8vw;
 }
 
-#section-carrousel::-webkit-scrollbar{
+#section-carrousel > section::-webkit-scrollbar{
     width: 10px;
     background-color: transparent;
 }
 
-#section-carrousel::-webkit-scrollbar-thumb{
+#section-carrousel > section::-webkit-scrollbar-thumb{
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
     background-color: #555;
 }
 
-    /*  ABOUT ME */
-    #about{
-        display: flex;
-        width: 75vw;
-        flex-direction: column;
-        align-items: center;
+section > video{
+    width: 60%;
+}
+
+
+@media screen and (width <= 774px ){
+    html, body{
+        overflow-x: hidden;
+        overflow-y: auto;
     }
-
-
+    h1{
+        font-size: 25px;
+    }
+    h2{
+        font-size: 20px;
+    }
+    p{
+        font-size: 15px;
+    }
+    header{
+        padding-left: 2%;
+        grid-template-columns: 1fr 6fr;
+        gap: 2%;
+    }
+    header > button{
+        display: none;
+    }
+    header > img{
+        display: block;
+    }
+    #section-carrousel{
+        height: auto;
+    }
+    footer{
+        position: relative;
+    }
+}

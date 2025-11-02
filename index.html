@@ -8,15 +8,23 @@
     <script src="js/script.js"></script>
 </head>
 <body>
+    <menu id="menu">
+        <img src="icons/close.svg" onclick="close_menu()">
+        <button onclick="select(0)">À propos</button>
+        <button onclick="select(1)">Mes projets</button>
+        <button onclick="select(2)">Contact</button>
+        <button onclick="select(3)">Curriculum Vitae</button>
+    </menu>
     <header>
+        <img src="icons/open.svg" onclick="open_menu()">
         <h1>Portfolio de Kilian</h1>
-        <button class="active">À propos</button>
-        <button>Mes projets</button>
-        <button>Contact</button>
-        <button>Curriculum Vitae</button>
+        <button onclick="select(0)">À propos</button>
+        <button onclick="select(1)">Mes projets</button>
+        <button onclick="select(2)">Contact</button>
+        <button onclick="select(3)">Curriculum Vitae</button>
     </header>
     <div id="section-carrousel">
-        <section id="about">
+        <section>
             <h1>Bonjour, je suis Kilian COULON-DEPUCCIO, étudiant en Informatique à l'IUT Lyon 1</h1>
 
             <h2>Mon parcours dans le web</h2>
@@ -49,6 +57,48 @@
             <p>
                 Mon anglais technique me permet de lire et comprendre la documentation, et je reste motivé pour découvrir et apprendre de nouvelles technologies afin de progresser constamment en tant que développeur.
             </p>
+        </section>
+        <section>
+            <h1>Mes projets actuels et projets aboutis</h1>
+
+            <h2>Application RH en C</h2>
+            <p>
+                En première année, dans le cadre d’un projet en binôme mené du 28 novembre 2024 au 12 janvier 2025, 
+                nous avons développé une application de gestion des ressources humaines en langage C. 
+                Celle-ci stockait les données dans un fichier CSV et permettait notamment de :
+            </p>
+
+            <ul>
+                <li>Ajouter, modifier et supprimer des clients</li>
+                <li>Afficher tous les clients, avec ou sans tri</li>
+                <li>Rechercher ou filtrer des clients selon différents critères</li>
+                <li>Afficher les clients incomplets</li>
+                <li>Sauvegarder les modifications dans le fichier CSV</li>
+            </ul>
+
+            <p>
+                Ce projet nous a permis de mettre en pratique les compétences acquises en C dans un contexte concret, 
+                tout en travaillant sur la gestion des données et la structuration du code.
+            </p>
+            <p>
+                Voici un petit aperçu de l'application 
+            </p>
+            <video src="videos/Application RH.mkv" controls></video>
+
+            <h2>Application Java de navigation</h2>
+
+            <p>Toujours en première année, dans un projet en trinôme mené du 7 avril 2025 au 26 juin 2025, nous avons développé une application de navigation pour la fête des lumières, l'objectif principal était surtout de calculer les plus court circuit de fichier TSP ou points ajouter par nous-même, et utiliser différent algorithme comme Insertion, Glouton et d'autre.</p>
+            <p>L'application pouvait manipuler des points géographiques comme euclidiens et exporter des résultats de différents fichier TSP.</p>
+            <p>
+                Voici un petit aperçu de l'application 
+            </p>
+            <video src="videos/Application Navigation.mp4" controls></video>
+        </section>
+        <section>
+            <h1>Section Contact</h1>
+        </section>
+        <section>
+            <h1>Section CV</h1>
         </section>
     </div>
     

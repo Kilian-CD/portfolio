@@ -164,7 +164,6 @@ menu > button.active:hover{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    overflow-x: auto;
     text-align: center;
     justify-content: center;
     width: fit-content;
@@ -174,7 +173,6 @@ menu > button.active:hover{
 
 #section-carrousel > section{
     display: flex;
-    height: min-content;
     min-height: calc(100svh - 225px - 4vw);
     flex: 0 0 84vw;
     flex-direction: column;

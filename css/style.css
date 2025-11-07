@@ -165,7 +165,7 @@ menu > button.active:hover{
     flex-direction: row;
     flex-wrap: nowrap;
     text-align: center;
-    justify-content: center;
+    justify-content: left;
     width: fit-content;
     height: calc(100svh - 225px);
     transition: transform ease-in-out 0.5s;

@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 		menu.style.left = "-100vw";
 		document.body.style.overflowY = "auto";
 	}
-	select = function(page){
+	select_section = function(page){
 		header_buttons[selected_page].className = "";
 		menu_buttons[selected_page].className = "";
 		header_buttons[page].className = "active";

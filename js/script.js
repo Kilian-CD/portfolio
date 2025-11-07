@@ -24,6 +24,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
 		tempUrl = new URL(window.location.href);
 		tempUrl.searchParams.set("page", selected_page)
 		window.history.pushState({}, '', tempUrl.toString());
+		close_menu();
+	}
 	}
 
 	let params = new URLSearchParams(document.location.search);

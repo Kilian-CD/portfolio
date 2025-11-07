@@ -183,6 +183,15 @@ menu > img{
 section > video{
     width: 60%;
 }
+
+/*  LIST  */
+#contact-list{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+
 /*  POPUP  */
 .popup{
     display: flex;

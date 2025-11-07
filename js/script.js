@@ -50,6 +50,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
 		
 	}
 
+	download_cv = function(){
+		const link = document.createElement("a");
+		link.href = "pdf/main.pdf";
+		link.download = "CV_Kilian_COULON-DEPUCCIO.pdf";
+		link.click();
+	}
+
 	let params = new URLSearchParams(document.location.search);
 	let selected_page = params.get("page") ?? 0;
 	if(selected_page != 0){

@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 	let params = new URLSearchParams(document.location.search);
 	let selected_page = params.get("page") ?? 0;
 	if(selected_page != 0){
-		select(selected_page)
+		select_section(selected_page)
 	}
 	header_buttons[selected_page].className = "active";
 	menu_buttons[selected_page].className = "active";

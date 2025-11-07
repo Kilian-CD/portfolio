@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", (event) => {
+	const body = document.getElementsByTagName("body")[0];
 	const menu = document.getElementById("menu");
 	const menu_buttons = menu.getElementsByTagName("button");
 	const header = document.getElementsByTagName("header")[0];

@@ -216,6 +216,7 @@ button{
     align-self: center;
     justify-self: center;
     text-align: center;
+    border: #cfcfcf solid 2px;
     border-radius: 10px;
     cursor: pointer;
     transition: color, background ease-in-out 0.25s;

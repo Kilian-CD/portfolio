@@ -183,6 +183,20 @@ menu > img{
 section > video{
     width: 60%;
 }
+/*  POPUP  */
+.popup{
+    display: flex;
+    position: fixed;
+    background-color: #2B6BED;
+    box-shadow: 0 5px 12px 0px #112c63;
+    border-radius: 10px;
+    padding: 25px 15px;
+    z-index: 2;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition: bottom ease-in-out 0.25s;
+}
+
 /*  BUTTON  */
 button{
     all: unset;

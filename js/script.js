@@ -26,6 +26,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
 		window.history.pushState({}, '', tempUrl.toString());
 		close_menu();
 	}
+
+	copy_text = function(text, element_name){
+		navigator.clipboard.writeText(text.innerHTML);
+		show_popup(element_name);
+	}
 	}
 
 	let params = new URLSearchParams(document.location.search);

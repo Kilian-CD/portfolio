@@ -31,6 +31,23 @@ document.addEventListener("DOMContentLoaded", (event) => {
 		navigator.clipboard.writeText(text.innerHTML);
 		show_popup(element_name);
 	}
+
+	show_popup = function(element_name){
+		const popup = document.createElement("div");
+		popup.className = "popup";
+		popup.innerHTML = `${element_name} copié(e) dans votre presse-papier.`
+		body.append(popup);
+		popup.style.bottom = `-${popup.offsetHeight}px`;
+		setTimeout(() => {
+			popup.style.bottom = "150px";
+		}, 50);
+		setTimeout(() => {
+			popup.style.bottom = `-${popup.offsetHeight}px`;
+			setTimeout(() => {
+				popup.remove();
+			}, 250);
+		}, 4000);
+		
 	}
 
 	let params = new URLSearchParams(document.location.search);

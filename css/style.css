@@ -147,33 +147,6 @@ menu > img{
     padding-left: 30px;
 }
 
-menu > button{
-    all: unset;
-    width: fit-content;
-    height: fit-content;
-    padding: 15px 20px;
-    align-self: center;
-    justify-self: center;
-    text-align: center;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: color, background ease-in-out 0.25s;
-}
-
-menu > button:hover:not(.active){
-    color: black;
-    background-color: white;
-    
-}
-menu > button.active{
-    background-color: #2B6BED;
-}
-menu > button.active:hover{
-    background-color: #112c63;
-    
-}
-
-
 /*  SECTION  */
 #section-carrousel{
     display: flex;
@@ -209,6 +182,38 @@ menu > button.active:hover{
 
 section > video{
     width: 60%;
+}
+/*  BUTTON  */
+button{
+    all: unset;
+    width: fit-content;
+    height: fit-content;
+    padding: 15px 20px;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: color, background ease-in-out 0.25s;
+}
+
+button:hover:not(.active){
+    color: black;
+    background-color: white;
+    
+}
+button.active{
+    background-color: #2B6BED;
+}
+button.active:hover{
+    background-color: #112c63;
+    
+}
+
+.copy-button{
+    border-color: #cfcfcf;
+    border-style: solid;
+    border-width: 2px;
 }
 
 

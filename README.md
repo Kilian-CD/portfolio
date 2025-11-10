@@ -8,7 +8,7 @@ Ce projet présente mes compétences, mes projets et mon expérience en dévelop
 
 ## 🚀 Démo
 
-Vous pouvez consulter le site en direct ici : [https://kiliancd.fr](https://kiliancd.fr)
+Vous pouvez consulter le site en direct ici : [http://kiliancd.fr](http://kiliancd.fr)
 
 ---
 

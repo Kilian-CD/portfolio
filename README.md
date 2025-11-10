@@ -49,6 +49,8 @@ portfolio/
 ├─ js/               # Scripts JavaScript
 │  └─ script.js
 ├─ icons/            # Icônes
+├─ pdf/              # PDF
+├─ videos/           # Vidéos
 └─ README.md
 └─ LICENSE
 ```

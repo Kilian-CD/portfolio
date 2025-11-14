@@ -246,9 +246,12 @@ iframe{
 
 
 @media screen and (width <= 774px ){
-    html, body{
+    html{
         overflow-x: hidden;
         overflow-y: auto;
+    }
+    body{
+        overflow: hidden;
     }
     h1{
         font-size: 25px;

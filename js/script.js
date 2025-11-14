@@ -65,11 +65,15 @@ document.addEventListener("DOMContentLoaded", (event) => {
 		link.click();
 	}
 
-	let params = new URLSearchParams(document.location.search);
-	let selected_page = params.get("page") ?? 0;
-	if(selected_page != 0){
-		select_section(selected_page)
-	}
+	window.addEventListener("resize", () => {
+		if(window.innerWidth <= 774){
+			carrousel.style.height = carrousel.children[selected_page].offsetHeight + "px";
+		}
+		else{
+			carrousel.style.height = "calc(100svh - 225px)";
+		}
+	});
+
 	header_buttons[selected_page].className = "active";
 	menu_buttons[selected_page].className = "active";
 	

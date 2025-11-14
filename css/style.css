@@ -8,11 +8,16 @@ body{
     font-family: "Space Grotesk", sans-serif;
 }
 
+/*  TEXT  */
 a{
     all: unset;
     text-decoration: underline;
     cursor: pointer;
     transition: color ease-in-out 0.2s;
+}
+
+a:hover{
+    color: #cfcfcf;
 }
 
 h1{
@@ -33,10 +38,6 @@ ul{
 
 li{
     font-size: 18px;
-}
-
-a:hover{
-    color: #cfcfcf;
 }
 
 /*  HEADER  */
@@ -274,5 +275,8 @@ iframe{
     }
     footer{
         position: relative;
+    }
+    section > video{
+        width: 80%;
     }
 }

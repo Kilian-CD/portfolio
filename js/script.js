@@ -76,5 +76,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 	header_buttons[selected_page].className = "active";
 	menu_buttons[selected_page].className = "active";
-	
+
+	select_section(selected_page)
 });

@@ -10,11 +10,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 	open_menu = function(){
 		menu.style.left = 0;
-		document.body.style.overflowY = "hidden";
+		document.querySelector("html").style.overflowY = "hidden";
 	}
 	close_menu = function(){
 		menu.style.left = "-100vw";
-		document.body.style.overflowY = "auto";
+		document.querySelector("html").style.overflowY = "auto";
 	}
 	select_section = function(page){
 		header_buttons[selected_page].className = "";

@@ -273,9 +273,6 @@ iframe{
     header > img{
         display: block;
     }
-    #section-carrousel{
-        height: auto;
-    }
     footer{
         position: relative;
     }

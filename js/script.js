@@ -4,7 +4,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
 	const menu_buttons = menu.getElementsByTagName("button");
 	const header = document.getElementsByTagName("header")[0];
 	const header_buttons = header.getElementsByTagName("button");
-	const carrousel = document.getElementById("section-carrousel")
+	const carrousel = document.getElementById("section-carrousel");
+	let params = new URLSearchParams(document.location.search);
+	let selected_page = params.get("page") ?? 0;
 
 	open_menu = function(){
 		menu.style.left = 0;

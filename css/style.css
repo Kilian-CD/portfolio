@@ -279,4 +279,8 @@ iframe{
     section > video{
         width: 80%;
     }
+    #section-carrousel > section{
+        height: fit-content;
+        overflow: hidden;
+    }
 }

@@ -23,6 +23,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
 		menu_buttons[page].className = "active";
 		selected_page = page;
 		carrousel.style.transform = `translate(${page*-100}vw)`
+		if(window.innerWidth <= 774){
+			carrousel.style.height = carrousel.children[page].offsetHeight + "px";
+		}
+		else{
+			carrousel.style.height = "calc(100svh - 225px)";
+		}
 		tempUrl = new URL(window.location.href);
 		tempUrl.searchParams.set("page", selected_page)
 		window.history.pushState({}, '', tempUrl.toString());

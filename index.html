@@ -98,7 +98,7 @@
             <p>
                 L'application permettait de manipuler aussi bien des points géographiques que des points euclidiens, 
                 et d'exporter les résultats sous différents formats de fichiers TSP.
-</p>
+            </p>
 
             <p>
                 Voici un petit aperçu de l'application 
@@ -120,6 +120,33 @@
                 Voici un bref aperçu du site.
             </p>
             <video src="videos/MangaReader.mp4" muted controls></video>
+
+            <h2>Application de gestion d'un cadre photo connecté</h2>
+            <h3>Présentation du projet</h3>
+            <p>Ce projet est une webapp de gestion de photos conçue pour fonctionner sur un appareil Android via Termux, ou sur n'importe quel système Linux. Elle permet de gérer un cadre photo connecté en ajoutant, activant ou désactivant des images, et en les supprimant si nécessaire. L'interface est entièrement web et adaptée aux téléphones, tablettes et ordinateurs.</p>
+            <h3>Fonctionnement général</h3>
+            <p>La webapp communique avec un serveur Flask via une API REST pour récupérer et modifier les données, et utilise Socket.IO pour envoyer les mises à jour en temps réel. Ainsi, chaque appareil connecté voit immédiatement les changements effectués par l'utilisateur.</p>
+            <h3>Authentification</h3>
+            <p>La connexion au site se fait avec Google OAuth. Après validation par Google, le serveur crée un JWT interne contenant l'identifiant Google de l'utilisateur ainsi que son nom et prénom. Ce jeton est stocké dans un cookie sécurisé (HttpOnly) et expire automatiquement après 24 heures. Comme le projet est pensé pour un usage personnel, il n'existe qu'un seul rôle utilisateur.</p>
+            <h3>Gestion des photos et dossiers</h3>
+            <p>Les images sont stockées dans trois dossiers principaux : <strong>active</strong>, <strong>inactive</strong> et <strong>deleted</strong>. - Le dossier <em>active</em> contient les images que l'application externe <strong>Fotoo</strong> peut lire pour le slideshow. - Le dossier <em>inactive</em> contient les images présentes mais non affichées. - Le dossier <em>deleted</em> correspond à la corbeille pour les suppressions temporaires. Lorsqu'une image est activée, elle est déplacée dans <em>active</em>. Lorsqu'elle est désactivée, elle retourne dans <em>inactive</em>. La suppression simple déplace l'image vers <em>deleted</em>, et la suppression définitive supprime le fichier du dossier. </p> <p> Chaque fichier ajouté est renommé avec un <strong>UUID</strong> unique pour éviter tout conflit de nom. Le <strong>hash du fichier</strong> est enregistré dans la base de données afin de permettre, dans un futur onglet, la détection et la suppression des photos dupliquées. </p> <p> La webapp offrira également la possibilité de modifier certains paramètres de Fotoo directement depuis l'interface. Cette fonctionnalité ne sera disponible que pour les appareils Android rootés, car elle nécessite la modification d'un fichier de configuration situé dans <code>/data/data</code>.</p>
+            <h3>Mise à jour et Watchdog</h3>
+            <p>Le serveur inclut un système Watchdog qui surveille en continu le dossier principal et tous les sous-dossiers (<em>active</em>, <em>inactive</em>, <em>deleted</em>). Chaque ajout, suppression ou modification de fichier est détecté automatiquement et entraîne la mise à jour de la base de données SQLite et l'envoi d'événements Socket.IO aux clients connectés, pour que l'interface reste synchronisée en temps réel. Actuellement, le Watchdog ne filtre aucun fichier.</p>
+            <h3>Déploiement sur Android et accès Internet</h3>
+            <p>Le projet fonctionne en continu sur un appareil Android via Termux. Un script shell lancé au démarrage démarre automatiquement le serveur Flask ainsi que le tunnel Cloudflare, permettant d'accéder à la webapp depuis n'importe où. Les images sont stockées dans un dossier accessible par Termux. Le serveur local tourne en HTTP, mais grâce au tunnel Cloudflare, la webapp est exposée via un nom de domaine personnel avec HTTPS fourni automatiquement.</p>
+            <h3>Objectif du projet</h3>
+            <p>L'objectif est de proposer une solution simple et légère pour gérer un cadre photo connecté sans dépendre de services externes. L'utilisateur peut contrôler le cadre depuis son téléphone, sa tablette ou son ordinateur, en local ou à distance, avec un système sécurisé et synchronisé en temps réel.</p>
+            <h3>Évolutions possibles</h3>
+            <ul>
+                <li>Tri ou filtrage des images par date, nom ou tag</li>
+                <li>Support d'albums ou tags pour mieux organiser les photos</li>
+                <li>Documentation pour intégrer d'autres applications de slideshow</li>
+                <li>Mode diaporama intégré avec intervalle configurable</li>
+                <li>Multi-utilisateurs ou rôles supplémentaires si nécessaire</li>
+            </ul>
+
+            <p>Malheureusement l'application n'étant pas du tout aboutis, aucun aperçu ne seras disponible pour l'instant</p>
+
         </section>
         <section>
             <h1>Curriculum Vitae</h1>

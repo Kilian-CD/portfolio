@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 	}
 
 	copy_text = function(text, element_name){
-		navigator.clipboard.writeText(text.innerHTML);
+		navigator.clipboard.writeText(text.querySelector("a").innerHTML);
 		show_popup(element_name);
 	}
 
